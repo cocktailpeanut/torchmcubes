@@ -42,7 +42,8 @@ try:
     })
     setup(**setup_kwargs)
 
-except:
+except Exception as error:
+    print(f"Error {error}")
     print('CUDA environment was not successfully loaded!')
     print('Build only CPU module!')
 
